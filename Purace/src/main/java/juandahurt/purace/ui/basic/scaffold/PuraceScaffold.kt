@@ -14,6 +14,7 @@ import androidx.compose.ui.*
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import juandahurt.purace.ui.basic.PuraceTextView
+import juandahurt.purace.ui.style.PuraceStyle
 
 @Composable
 fun PuraceScaffold(
@@ -38,7 +39,8 @@ fun PuraceScaffold(
                             .clickable(indication = null, interactionSource = MutableInteractionSource()) {
                                 onBackTap()
                             }
-                            .padding(start = 8.dp)
+                            .padding(start = 8.dp),
+                        tint = PuraceStyle.Color.N1
                     )
                 }
             )

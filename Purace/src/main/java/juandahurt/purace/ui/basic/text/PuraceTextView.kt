@@ -9,6 +9,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 import juandahurt.purace.R
+import juandahurt.purace.ui.style.PuraceStyle
 
 private val fontFamily = FontFamily(
     Font(R.font.poppins_regular, weight = FontWeight.Normal),
@@ -30,6 +31,7 @@ fun PuraceTextView(
         fontFamily = fontFamily,
         fontWeight = weight,
         fontSize = size.sp,
-        textAlign = textAlign
+        textAlign = textAlign,
+        color = PuraceStyle.Color.N1
     )
 }

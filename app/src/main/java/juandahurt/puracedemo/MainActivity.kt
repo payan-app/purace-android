@@ -5,10 +5,15 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.ui.Modifier
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -51,10 +56,15 @@ fun MainMenu(navController: NavHostController) {
     Scaffold {
         Column {
             Text(
-                modifier = Modifier.clickable {
-                    navController.navigate("text")
-                },
-                text = "Text"
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(45.dp)
+                    .clickable {
+                        navController.navigate("text")
+                    },
+                text = "Text",
+                textAlign = TextAlign.Center,
+                fontSize = 16.sp
             )
         }
     }
