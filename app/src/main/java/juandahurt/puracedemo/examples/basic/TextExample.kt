@@ -56,23 +56,6 @@ fun TextExample(navController: NavHostController) {
                 size = 20,
                 weight = FontWeight.Medium
             )
-
-            PuraceTextView(
-                text = "Texto normal semi bold",
-                weight = FontWeight.SemiBold
-            )
-
-            PuraceTextView(
-                text = "Texto mediano semi bold",
-                size = 16,
-                weight = FontWeight.SemiBold
-            )
-
-            PuraceTextView(
-                text = "Texto grande semi bold",
-                size = 20,
-                weight = FontWeight.SemiBold
-            )
         }
     }
 }

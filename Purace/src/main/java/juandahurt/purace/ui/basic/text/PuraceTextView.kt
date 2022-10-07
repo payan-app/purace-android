@@ -14,7 +14,6 @@ import juandahurt.purace.ui.style.PuraceStyle
 private val fontFamily = FontFamily(
     Font(R.font.poppins_regular, weight = FontWeight.Normal),
     Font(R.font.poppins_medium, weight = FontWeight.Medium),
-    Font(R.font.poppins_semibold, weight = FontWeight.SemiBold),
 )
 
 @Composable
