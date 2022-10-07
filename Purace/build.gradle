@@ -10,7 +10,7 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
 
-                groupId = 'com.github.juandahurt'
+                groupId = 'com.github.payan-app'
                 artifactId = 'purace-android'
                 version = '1.0.0'
             }
