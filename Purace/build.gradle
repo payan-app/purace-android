@@ -4,15 +4,15 @@ plugins {
     id 'maven-publish'
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.github.payan-app'
+            artifactId = 'purace-android'
+            version = '1.0.0'
 
-                groupId = 'com.github.payan-app'
-                artifactId = 'purace-android'
-                version = '1.0.0'
+            afterEvaluate {
+                from components.release
             }
         }
     }
