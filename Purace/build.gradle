@@ -4,9 +4,6 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'com.github.payan-app'
-version = '1.0.0'
-
 android {
     namespace 'juandahurt.purace'
     compileSdk 32
@@ -55,16 +52,33 @@ dependencies {
     implementation("io.coil-kt:coil:2.2.2")
     implementation("io.coil-kt:coil-compose:2.2.2")
 }
+//
+// To publish the lib
+//
+def githubProperties = new Properties()
+githubProperties.load(new FileInputStream(rootProject.file("github.properties")))
 
 afterEvaluate {
     publishing {
         publications {
-            // Creates a Maven publication called "release".
             release(MavenPublication) {
                 from components.release
-                groupId = 'com.github.payan-app'
-                artifactId = 'purace-andoird'
-                version = '1.0.0'
+                groupId 'juandahurt'
+                artifactId 'purace'
+                version '1.0.0'
+            }
+        }
+
+        repositories {
+            maven {
+                name = "GitHubPackages"
+
+                url = uri("https://maven.pkg.github.com/payan-app/purace-android")
+
+                credentials {
+                    username = githubProperties['gpr.usr']
+                    password = githubProperties['gpr.key']
+                }
             }
         }
     }
