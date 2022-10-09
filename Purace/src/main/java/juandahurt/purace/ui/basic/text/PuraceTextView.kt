@@ -1,8 +1,9 @@
-package juandahurt.purace.ui.basic
+package juandahurt.purace.ui.basic.text
 
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -22,7 +23,8 @@ fun PuraceTextView(
     text: String,
     size: Int = 12,
     weight: FontWeight = FontWeight.Normal,
-    textAlign: TextAlign = TextAlign.Justify
+    textAlign: TextAlign = TextAlign.Justify,
+    color: Color = PuraceStyle.Color.N1
 ) {
     Text(
         modifier = modifier,
@@ -31,6 +33,6 @@ fun PuraceTextView(
         fontWeight = weight,
         fontSize = size.sp,
         textAlign = textAlign,
-        color = PuraceStyle.Color.N1
+        color = color
     )
 }
