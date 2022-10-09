@@ -13,7 +13,7 @@ android {
         targetSdk 32
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
-        versionName "1.0.0"
+        versionName "1.0.1"
     }
 
     buildFeatures {
@@ -69,7 +69,7 @@ afterEvaluate {
                 from components.release
                 groupId 'juandahurt'
                 artifactId 'purace'
-                version '1.0.0'
+                version '1.0.1'
             }
         }
 
