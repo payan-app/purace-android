@@ -13,7 +13,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.*
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import juandahurt.purace.ui.basic.PuraceTextView
+import juandahurt.purace.ui.basic.text.PuraceTextView
 import juandahurt.purace.ui.style.PuraceStyle
 
 @Composable
