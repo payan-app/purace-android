@@ -18,6 +18,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import juandahurt.puracedemo.examples.basic.CircularLoaderExample
 import juandahurt.puracedemo.examples.basic.ImageExample
 import juandahurt.puracedemo.examples.basic.TextExample
 
@@ -53,6 +54,10 @@ fun MenuWrapper(
         composable("image") {
             ImageExample(navController)
         }
+
+        composable("loaders") {
+            CircularLoaderExample(navController)
+        }
     }
 }
 
@@ -80,6 +85,18 @@ fun MainMenu(navController: NavHostController) {
                         navController.navigate("image")
                     },
                 text = "Image",
+                textAlign = TextAlign.Center,
+                fontSize = 16.sp
+            )
+
+            Text(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(45.dp)
+                    .clickable {
+                        navController.navigate("loaders")
+                    },
+                text = "Loaders",
                 textAlign = TextAlign.Center,
                 fontSize = 16.sp
             )
